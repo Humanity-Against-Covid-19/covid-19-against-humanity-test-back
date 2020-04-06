@@ -1,0 +1,24 @@
+{
+  "name": "test-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Humanity-Against-Covid-19/covid-19-against-humanity-test-back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Humanity-Against-Covid-19/covid-19-against-humanity-test-back/issues"
+  },
+  "homepage": "https://github.com/Humanity-Against-Covid-19/covid-19-against-humanity-test-back#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  }
+}
