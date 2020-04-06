@@ -43,6 +43,7 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: traefik
+    traefik.frontend.rule.type: pathprefixstrip
   name: humanity-against-covid19-test-back
   namespace: default
 spec:
