@@ -14,9 +14,8 @@ const server = require('http').createServer(app);
 app.use(logger('dev'));
 app.use(express.static(`${__dirname}/public`));
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 80;
 
 server.listen(port, function() {
   console.log(`Horrible people listen to ${port}`);
 });
-

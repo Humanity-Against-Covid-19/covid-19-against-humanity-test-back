@@ -14,15 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: yarn install
-        run: yarn install
-
-      - name: yarn build
-        run: yarn prodBuild
+      - name: npm install
+        run: npm install
 
       - uses: mr-smithers-excellent/docker-build-push@v2
         with:
-          image: humanityagainstcovid19/frontend
+          image: humanityagainstcovid19/test-back
           tag: ${GITHUB_RUN_ID}
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -39,5 +36,5 @@ jobs:
           namespace: 'default'
           manifests: |
               deploy/deployment.yaml
-          images: 'humanityagainstcovid19/frontend:${{ github.run_id }}'
+          images: 'humanityagainstcovid19/test-back:${{ github.run_id }}'
           kubectl-version: latest
