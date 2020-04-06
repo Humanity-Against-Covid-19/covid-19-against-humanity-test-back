@@ -1,21 +1,7 @@
-const express = require('express');
-const logger = require('morgan');
-const path = require('path');
+const express = require('express')
+const app = express()
+const port = 80
 
-const app = express();
+app.get('/', (req, res) => res.send('Horrible server!'))
 
-const server = require('http').createServer(app);
-
-// keep the heroku app awake!!
-// setInterval(function() {
-//   require('http').get('http://cardsagainstyoursanity.herokuapp.com');
-// }, 300000);
-
-app.use(logger('dev'));
-app.use(express.static(`${__dirname}/public`));
-
-const port = process.env.PORT || 80;
-
-server.listen(port, function() {
-  console.log(`Horrible people listen to ${port}`);
-});
+app.listen(port, () => console.log(`Listening at http://localhost:${port}`))
