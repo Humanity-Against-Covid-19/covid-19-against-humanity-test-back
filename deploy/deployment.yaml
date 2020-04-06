@@ -43,7 +43,7 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: traefik
-    traefik.frontend.rule.type: pathprefixstrip
+    traefik.frontend.rule.type: PathPrefixStrip
   name: humanity-against-covid19-test-back
   namespace: default
 spec:
@@ -51,7 +51,7 @@ spec:
   - host: humanityagainstcovid19.com
     http:
       paths:
-      - backend:
+      - path: /api
+        backend:
           serviceName: humanity-against-covid19-test-back
           servicePort: 80
-        path: /api
