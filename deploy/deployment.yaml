@@ -53,4 +53,4 @@ spec:
       - backend:
           serviceName: humanity-against-covid19-test-back
           servicePort: 80
-        path: /
+        path: /api
